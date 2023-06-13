@@ -24,7 +24,7 @@ class ValidateNumberRequest extends RequestAbstract
    public function rules() : array
    {
         return [
-            'number' => 'required|numeric|integer'
+            'number' => 'required|numeric|integer|min:0'
         ];
    }
 
@@ -38,7 +38,8 @@ class ValidateNumberRequest extends RequestAbstract
         return [
             'number.required'   =>  'Debes ingresar un número',
             'number.numeric'    =>  'Debes ingresar un número',
-            'number.integer'    =>  'El número debe ser entero'
+            'number.integer'    =>  'El número debe ser entero',
+            'number.min'        =>  'El número debe ser positivo'
         ];
     }
 }

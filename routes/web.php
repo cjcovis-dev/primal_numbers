@@ -14,7 +14,7 @@
 */
 
 $router->get('hi', function () {
-    return "Hello Wolrld";
+    return "Hello World";
 });
 
 $router->get('/', [
